@@ -6,3 +6,5 @@ python-dotenv
 langchain-community
 langchain-openai
 reportlab
+pdfkit
+markdown2

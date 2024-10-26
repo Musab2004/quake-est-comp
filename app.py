@@ -9,6 +9,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain.prompts import HumanMessagePromptTemplate
 from langchain.prompts import SystemMessagePromptTemplate
 from langchain.prompts import ChatPromptTemplate
+import markdown2
+import pdfkit
 
 # ------------------------------------------------ Initial Chain to Generate Outline --------------------------------#
 
@@ -165,14 +167,6 @@ if st.button("Compare Data"):
             )
             st.subheader("Generated Report")
             st.markdown(report)
-
-            pdf_output = BytesIO(report.encode("utf-8"))
-            st.download_button(
-                label="Download Report as PDF",
-                data=pdf_output,
-                file_name="damage_estimate_analysis_report.pdf",
-                mime="application/pdf",
-            )
         else:
             st.warning(
                 "Please submit both Pre-Earthquake and Post-Earthquake data before comparing."
