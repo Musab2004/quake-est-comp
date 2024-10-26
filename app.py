@@ -9,8 +9,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain.prompts import HumanMessagePromptTemplate
 from langchain.prompts import SystemMessagePromptTemplate
 from langchain.prompts import ChatPromptTemplate
-import markdown2
-import pdfkit
+
 
 # ------------------------------------------------ Initial Chain to Generate Outline --------------------------------#
 
